@@ -5,6 +5,7 @@ import Layout from './Layout/Layout'
 import Help from './pages/Help'
 import Subscription from './pages/Subscription'
 import Health from './pages/Health'
+import PageNotFound from './pages/PageNotFound'
 
 
 
@@ -15,10 +16,10 @@ function App() {
     <Routes>
        <Route path='' element={<Layout></Layout>}>
         <Route path='/About' element={<Help></Help>}></Route>
-        <Route path='/Help' element={<>www</>}></Route>
+        <Route path='/Help' element={<><h1>404 ERROR</h1></>}></Route>
         <Route path='/Subscription' element={<Subscription></Subscription>}></Route>
         <Route path='/Health' element={<Health></Health>}></Route>
-      
+        <Route path='*' element={<PageNotFound></PageNotFound>}></Route>
       </Route>
     </Routes>
     </>
